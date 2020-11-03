@@ -1,4 +1,4 @@
-
+#include "stdio.h"
 #include "calc.h"
 #include "omp.h"
 
@@ -82,10 +82,12 @@ void func_9(const double* valueSpiceMatrix, const int* rowOffset, double* A, dou
 
 void matrix_calc_taskA(TaskMatrixInfoA** ptr, int size)
 {
-#pragma omp parallel for
+
     for (int i = 0; i < size; i++)
     {
+	    printf("%d",size);
         func_6(ptr[i]->rowArray, ptr[i]->rowOffset, ptr[i]->rowArraySize, ptr[i]->columnIndice, ptr[i]->S, ptr[i]->valueNormalMatrix, ptr[i]->Id);
+	printf("%d:%d,%d\n",i,ptr[i]->rowArraySize,(ptr[i]->rowOffset)[52]);
     }
     
 }

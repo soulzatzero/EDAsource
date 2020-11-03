@@ -1,7 +1,7 @@
 
 
 SRCS = calc.cc
-LIBNAME = libcompetition.so
+LIBNAME = libtestzzy.so
 
 all:$(OBJS)
 	g++ ${SRCS} -fopenmp -shared -fPIC -o ${LIBNAME}
