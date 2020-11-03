@@ -1,6 +1,6 @@
 
 
-SRCS = calc.cc
+SRCS = col_compression.cc
 LIBNAME = libtestzzy.so
 
 all:$(OBJS)

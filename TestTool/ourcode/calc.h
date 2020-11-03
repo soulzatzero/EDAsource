@@ -10,7 +10,7 @@ typedef struct {
 	int*				rowArray;
 	const int*			rowOffset;
 	int				rowArraySize;
-	const int* 			columnIndice;
+	int* 			columnIndice;
 	const double*			S;
 	const double*			valueNormalMatrix;
 	double*				Id;
